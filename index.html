@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample: Harbor Plumbing &amp; Drain (demo site)</title>
+<meta name="description" content="Demo website for a fictional plumbing company, built as a portfolio sample.">
+<style>
+  :root{--blue:#0b5cad;--dark:#0f1b2d;--light:#f4f7fb;--accent:#ffb400}
+  *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--dark);line-height:1.5}
+  .demo{background:var(--accent);text-align:center;padding:.4rem;font-size:.85rem;font-weight:600}
+  header{display:flex;justify-content:space-between;align-items:center;padding:1rem 5%;background:#fff;position:sticky;top:0;box-shadow:0 1px 6px #0001}
+  .logo{font-weight:800;font-size:1.2rem;color:var(--blue)}
+  .call{background:var(--blue);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none;font-weight:700}
+  .hero{background:linear-gradient(135deg,var(--blue),#073b70);color:#fff;padding:4rem 5%}
+  .hero h1{font-size:clamp(2rem,5vw,3.2rem);margin:0 0 .5rem}.hero p{font-size:1.15rem;max-width:40rem;opacity:.9}
+  .btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+  .btn{padding:.9rem 1.4rem;border-radius:10px;font-weight:700;text-decoration:none}
+  .primary{background:var(--accent);color:var(--dark)}.ghost{border:2px solid #fff;color:#fff}
+  section{padding:3.5rem 5%}h2{font-size:1.8rem;margin-top:0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+  .card{background:var(--light);padding:1.4rem;border-radius:12px}
+  .trust{background:var(--light);display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;font-weight:700}
+  form{display:grid;gap:.8rem;max-width:32rem}
+  input,textarea{padding:.8rem;border:1px solid #ccd;border-radius:8px;font:inherit}
+  button{background:var(--blue);color:#fff;border:0;padding:.9rem;border-radius:8px;font-weight:700;font-size:1rem}
+  footer{background:var(--dark);color:#aab;padding:2rem 5%;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="demo">SAMPLE SITE: "Harbor Plumbing" is a fictional business made up for this portfolio demo.</div>
+<header><div class="logo">Harbor Plumbing &amp; Drain</div><a class="call" href="#contact">Get a Quote</a></header>
+<div class="hero">
+  <h1>Fast, honest plumbing, same-day when you need it.</h1>
+  <p>Leaks, clogs, water heaters, and repiping. Upfront pricing before any work starts.</p>
+  <div class="btns"><a class="btn primary" href="#contact">Request Service</a><a class="btn ghost" href="#services">See Services</a></div>
+</div>
+<div class="trust" style="padding:1.5rem 5%"><span>✔ Licensed &amp; insured</span><span>✔ Upfront pricing</span><span>✔ Evening &amp; weekend slots</span></div>
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Leak Repair</h3><p>Find and fix leaks fast, before they damage your home.</p></div>
+    <div class="card"><h3>Drain Cleaning</h3><p>Kitchen, bath, and main-line clogs cleared with camera inspection.</p></div>
+    <div class="card"><h3>Water Heaters</h3><p>Repair and replacement for tank and tankless units.</p></div>
+    <div class="card"><h3>Repiping</h3><p>Whole-home PEX and copper repipes with minimal wall damage.</p></div>
+  </div>
+</section>
+<section style="background:var(--light)">
+  <h2>How it works</h2>
+  <div class="grid">
+    <div><h3>1. Tell us the problem</h3><p>Use the form or call, and we'll reply quickly.</p></div>
+    <div><h3>2. Get a clear price</h3><p>You approve the price before any work begins.</p></div>
+    <div><h3>3. Fixed right</h3><p>Clean work, and the job is guaranteed.</p></div>
+  </div>
+</section>
+<section id="contact">
+  <h2>Request service</h2>
+  <form onsubmit="event.preventDefault();this.innerHTML='<p><strong>Thanks!</strong> (Demo form: nothing was sent.)</p>'">
+    <input required placeholder="Name"><input required type="tel" placeholder="Phone">
+    <textarea rows="4" placeholder="What's going on?"></textarea>
+    <button>Send Request</button>
+  </form>
+</section>
+<footer>Demo site built as a portfolio sample. Fictional business, no real contact details.</footer>
+</body>
+</html>
